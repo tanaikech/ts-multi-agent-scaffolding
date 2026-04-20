@@ -41,7 +41,7 @@ cd ts-multi-agent-scaffolding
 npm install
 ```
 
-### 3\. Running the Agents
+### 3. Running the Agents
 
 You can launch specific agents or the full orchestrator by setting the `SAMPLE_TYPE` environment variable.
 
@@ -84,13 +84,13 @@ Once the Orchestrator (Sample 5) is running, you can interact with it to perform
 
 ---
 
-\<a name="license"\>\</a\>
+<a name="license"></a>
 
 ## License
 
 [MIT](https://www.google.com/search?q=LICENCE)
 
-\<a name="author"\>\</a\>
+<a name="author"></a>
 
 ## Author
 
