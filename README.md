@@ -43,36 +43,83 @@ cd ts-multi-agent-scaffolding
 npm install
 ```
 
-### 3. Running the Agents
+### 3. Running the Agents as Web server
 
-You can launch specific agents or the full orchestrator by setting the `SAMPLE_TYPE` environment variable.
-
-```bash
-# Run the Multi-Agent Orchestrator (Sample 5) Default.
-SAMPLE_TYPE=5 npx tsx sample5/a2aserver.ts
-
-# Run the Local File Expert with MCP (Sample 3)
-SAMPLE_TYPE=3 npx tsx sample5/a2aserver.ts
-```
-
-or, using npm run,
+When you access `http://localhost:8000` using your browser, you can see the launched agent.
 
 ```bash
 npm run sample1
+```
 
+The actual result is as follows.
+
+```bash
+$ npm run sample1
+
+> adk-full-samples@1.0.0 sample1
+> npx adk web sample1/agent.ts
+
+
++-----------------------------------------------------------------------------+
+| ADK API Server started                                                      |
+|                                                                             |
+| For local testing, access at http://localhost:8000.                         |
++-----------------------------------------------------------------------------+
+```
+
+or
+
+```bash
 npm run sample2
+```
 
+or
+
+```bash
 npm run sample3
+```
 
+or
+
+```bash
 npm run sample4
+```
 
+### 4. Running the Agents as A2A server
+
+You can launch the A2A server with multiple agents as follows.
+
+```bash
 npm run sample5
 ```
 
-### 4\. Verification
+The actual result is as follows.
 
-Once the server is running, you can access the **Agent Card** (A2A metadata) at:
-`http://localhost:8000/.well-known/agent-card.json`
+```bash
+$ npm run sample5
+
+> adk-full-samples@1.0.0 sample5
+> npx tsx sample5/a2aserver.ts
+
+Secure MCP Filesystem Server running on stdio
+Client does not support MCP Roots, using allowed directories set from server args: [ '/tanaike/sample3/sample' ]
+Server started on http://localhost:8000
+Try: http://localhost:8000/.well-known/agent-card.json
+```
+
+In this case, in order to test this A2A server as a subagent using Gemini CLI, please set `.gemini/agents/sample-adk-agent.md` as follows.
+
+```text
+---
+kind: remote
+name: sample-adk-agent
+agent_card_url: http://localhost:8000/.well-known/agent-card.json
+---
+```
+
+When Gemini CLI is opened, you can use this sample agent as a subagent.
+
+Of course, you can also see the agent card by accessing this agent card URL with your browser.
 
 ---
 
