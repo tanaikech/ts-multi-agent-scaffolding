@@ -125,11 +125,40 @@ Of course, you can also see the agent card by accessing this agent card URL with
 
 ## Usage Examples
 
-Once the Orchestrator (Sample 5) is running, you can interact with it to perform complex tasks:
+### Sample 1: `general_logic_analyst` (Logic & Synthesis)
 
-- **Parallel Task:** "What is the weather in Osaka and the current USD/JPY rate? Summarize the impact on local tourism."
-- **File & Logic:** "Read the README.md in the sample directory and check if the installation steps are logically consistent."
-- **Workspace Help:** "How do I use the new SHEET function in Google Sheets? Provide an example based on the Workspace documentation."
+**Focus:** Logical analysis, summarization, drafting, and evaluation.
+
+- **Prompt A (Logic Check):** _"I have a plan to launch a global campaign on May 1st. However, the budget approval is on May 5th, and the creative assets take 10 days to produce. Analyze the logical timeline and point out any conflicts."_
+- **Prompt B (Summarization):** _"Summarize the core benefits of using a Multi-Agent system over a single LLM prompt for enterprise automation. Provide a professional executive summary."_
+
+### Sample 2: `api_manager_agent` (External Data)
+
+**Focus:** Real-time data retrieval via external APIs (Weather, Exchange Rates).
+
+- **Prompt A (Currency):** _"What is the current exchange rate from USD to JPY? Based on that, how much is $1,500 in Japanese Yen?"_
+- **Prompt B (Weather):** _"Get the current weather for Osaka (Lat: 34.69, Lon: 135.50). Is it a good day for an outdoor photo shoot?"_
+
+### Sample 3: `local_file_expert` (File Operations)
+
+**Focus:** Local filesystem operations via MCP (`sample3/sample` directory).
+
+- **Prompt A (List Files):** _"List all files available in the permitted 'sample' directory and tell me the file size of each."_
+- **Prompt B (Content Analysis):** _"Read the content of 'config.json' if it exists, and explain its current configuration settings."_
+
+### Sample 4: `workspace_doc_guide` (Google Workspace Expert)
+
+**Focus:** Technical support for Google Workspace APIs and Apps Script (GAS).
+
+- **Prompt A (GAS Implementation):** _"How can I use the Gmail API via Apps Script to automatically save attachments to a specific Google Drive folder? Provide a code snippet."_
+- **Prompt B (MCP Knowledge):** _"Explain the best practices for using the SHEETS function in Google Sheets as a custom trigger, based on the latest Workspace documentation."_
+
+### Sample 5: `multi_agent_orchestrator` (Orchestration)
+
+**Focus:** Coordination of multiple agents using serial, parallel, and iterative strategies.
+
+- **Prompt A (Serial Workflow: API -> File -> Logic):** _"Get the current weather in Tokyo, save that information as a new file named 'tokyo_weather.txt' in the local directory, and then write a professional email draft based on that weather for a client meeting."_
+- **Prompt B (Complex Integration: Workspace -> Logic -> API):** _"Research the best way to automate currency reporting in Google Sheets using the Workspace guide, then use the API manager to find the current EUR to JPY rate, and finally create a logical plan for a daily automation script."_
 
 ---
 
