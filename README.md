@@ -1,3 +1,5 @@
+<a name="top"></a>
+
 # Multi-Agent Scaffolding with TypeScript and @google/adk
 
 This repository provides a comprehensive scaffolding for building and orchestrating multi-agent systems using the **TypeScript version of @google/adk**. It demonstrates how to integrate local reasoning, API tools, **Model Context Protocol (MCP)**, and **Agent-to-Agent (A2A)** protocols into a unified orchestrator.
@@ -96,7 +98,7 @@ Once the Orchestrator (Sample 5) is running, you can interact with it to perform
 
 [Tanaike](https://tanaikech.github.io/about/)
 
-[TOP](https://www.google.com/search?q=%23top)
+[TOP](#top)
 
 ---
 
