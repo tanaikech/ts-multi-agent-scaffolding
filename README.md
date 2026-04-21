@@ -12,10 +12,11 @@ By leveraging `@google/adk`, this project showcases five progressive levels of A
 2.  **API Manager (Sample 2):** Integrates dynamic tools for real-time weather and currency exchange data.
 3.  **Local File Expert (Sample 3):** Utilizes **MCP (Filesystem)** to interact with local directories securely.
 4.  **Workspace Doc Guide (Sample 4):** Connects to remote **MCP servers** via HTTP for specialized documentation retrieval.
-5.  **Multi-Agent Orchestrator (Sample 5):** A senior-level agent that coordinates the above four sub-agents using Serial, Parallel, or Iterative execution strategies.
+5.  **Multi-Agent Orchestrator (Sample 5):** A senior-level agent that coordinates the above four sub-agents using Serial, Parallel, or Iterative execution strategies. In this case, the agents from samples 1 to 4 are orchestrated.
+6.  **A2A server (Sample 6):** The A2A server with the above agents.
 
 For a detailed technical walkthrough, please refer to the article:
-**[Building Multi-Agent Systems with TypeScript @google/adk and MCP](YOUR_MEDIUM_ARTICLE_LINK_HERE)**
+**[Orchestrating Agents via ADK for TypeScript and Gemini CLI](https://medium.com/google-cloud/orchestrating-agents-via-adk-for-typescript-and-gemini-cli-8629a86b0500)**
 
 ---
 
@@ -85,24 +86,30 @@ or
 npm run sample4
 ```
 
-### 4. Running the Agents as A2A server
-
-You can launch the A2A server with multiple agents as follows.
+or
 
 ```bash
 npm run sample5
 ```
 
+### 4. Running the Agents as A2A server
+
+You can launch the A2A server with multiple agents as follows.
+
+```bash
+npm run sample6
+```
+
 The actual result is as follows.
 
 ```bash
-$ npm run sample5
+$ npm run sample6
 
-> adk-full-samples@1.0.0 sample5
-> npx tsx sample5/a2aserver.ts
+> adk-full-samples@1.0.0 sample6
+> npx tsx sample6/a2aserver.ts
 
 Secure MCP Filesystem Server running on stdio
-Client does not support MCP Roots, using allowed directories set from server args: [ '/tanaike/sample3/sample' ]
+Client does not support MCP Roots, using allowed directories set from server args: [ '/{your directory}/sample3/sample' ]
 Server started on http://localhost:8000
 Try: http://localhost:8000/.well-known/agent-card.json
 ```
