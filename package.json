@@ -7,7 +7,8 @@
     "sample2": "npx adk web sample2/agent.ts",
     "sample3": "npx adk web sample3/agent.ts",
     "sample4": "npx adk web sample4/agent.ts",
-    "sample5": "npx tsx sample5/a2aserver.ts"
+    "sample5": "npx adk web sample5/agent.ts",
+    "sample6": "npx tsx sample6/a2aserver.ts"
   },
   "dependencies": {
     "@google/adk": "latest",
